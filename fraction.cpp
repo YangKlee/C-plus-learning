@@ -44,8 +44,6 @@ void write_file(int fraction_type_list[], int n)
 void read_file(fraction frac)
 {
     int n;
-
-
     // get number of elements
     ifstream input;
     input.open("fraction.inp");
@@ -66,11 +64,8 @@ void read_file(fraction frac)
             if(j > k)
             {
                 frac.y *= temp;
-
             }
         }
-        //cout << frac.y << endl;
-        //cout << type_fraction(frac.y) << endl;
         fraction_type_list[i] = type_fraction(frac.y);
     }
     input.close();
