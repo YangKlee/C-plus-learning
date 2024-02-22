@@ -68,7 +68,6 @@ void tinhDNV(int col[], int water[], int n)
                 }
                 else
                     water[i] = 0;
-                //cout <<"DEBUG: "<<i << " "<< col[i] << endl;
             }
             else
             {
@@ -77,10 +76,7 @@ void tinhDNV(int col[], int water[], int n)
                 water[i] = 0;
             }
         }
-
     }
-
-
 }
 int get_dvn(int water[], int n)
 {
@@ -105,8 +101,6 @@ void calc_Max_Water(int col[], int water[], int n, int m)
 {
     int x = 0;
     tinhDNV(col, water, n);
-    //cout << get_dvn(water, n) << endl;
-      //xuatmang(water, n);
     while(get_dvn(water, n) >= m)
     {
         for(int i = 1 ; i < n-1; i++)
@@ -114,25 +108,24 @@ void calc_Max_Water(int col[], int water[], int n, int m)
             if(water[i] > 0)
                 water[i]--;
         }
-        //xuatmang(water, n);
         x++;
     }
-    write_file(x+ get_min_build(col, n));
-
-
+    if(x > 0)
+    {
+        write_file(x+ get_min_build(col, n));
+    }
+    else
+        write_file(-1);
 }
 int main()
 {
     int n, m;
-    // get num
     ifstream input;
     input.open("buildcol.inp");
     input >> n;
     input.close();
     int col_data[n], water_data[n];
     read_file(col_data, n, m);
-    //xuatmang(col_data, n);
     calc_Max_Water(col_data, water_data, n, m);
-    //xuatmang(col_data, n);
 
 }
