@@ -1,3 +1,15 @@
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+void inputArray(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    
+}
 //                _ooOoo_                          NAM MÔ A DI ĐÀ PHẬT !
 //               o8888888o
 //               88" . "88                Thí chủ con tên là Nguyễn Khánh Dương, sinh 18/07/2005
@@ -15,22 +27,10 @@
 //   | | : `- \`.;`\ _ /`;.`/ - ` : | |  QUẢNG ĐẠI LINH CẢM QUÁN THẾ ÂM BỒ TÁT
 //     \ \ `-. \_ __\ /__ _/ .-` / /
 //======`-.____`-.___\_____/___.-`____.-'======
-#include <iostream>
-#include <math.h>
-using namespace std;
-void inputArray(int a[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cin >> a[i];
-    }
-    
-}
-
 int find_equas_is_S(int a[], int n, int s)
 {
-    int x, ptu = 0, dem = 0;
-    if(s <= 0)
+    int x, ptu = 0, dem = 0, sum = 0;
+    if(s <= 0 || sum  == s)
     {
         return 0;
     }
@@ -50,8 +50,13 @@ int find_equas_is_S(int a[], int n, int s)
         {
             return find_equas_is_S(a,n, x) ;
         }
+        else
+        {
+            dem = 0;
+        }
 
-    } 
+    }
+
 }
 int main()
 {

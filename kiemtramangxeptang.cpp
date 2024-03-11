@@ -8,16 +8,16 @@ void inputArray(int a[], int n)
     }
     
 }
-bool checkTangDan(int a[], int n,int i)
+bool checkTangDan(int a[], int n)
 {
-    if(i >= n-1)
+    if(n == 1 )
         return 1;
     else
     {
-        if(a[i] > a[i+1])
+        if(a[n - 1] < a[n-2])
             return 0;
         else
-            return 1 * checkTangDan(a, n, i+=1);
+            return 1 * checkTangDan(a, n-1);
     }
 }
 int main()
@@ -28,7 +28,7 @@ int main()
     int a[n];
     cout << "Nhap cac phan tu cua mang: ";
     inputArray(a,n);
-    if(checkTangDan(a, n, 0))
+    if(checkTangDan(a, n))
         cout << "Day so tang!" << endl;
     else
         cout << "Day so hong tang!" << endl;

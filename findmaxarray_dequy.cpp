@@ -14,13 +14,23 @@ int MaxArray(int a[], int n, int max)
         return max;
     else    
     {
-        if(a[n] > max)
+        if(a[n-1] > max)
         {
-            max = a[n];
+            max = a[n-1];
         }
         return MaxArray(a, n - 1, max);
     }
     
+}
+int ln(int a[], int n)
+{
+    if(n == 1)
+        return a[0];
+    if(a[n - 1] > ln(a, n - 1))
+        return a[n - 1];
+    else
+        return ln(a, n-1);
+
 }
 int main()
 {
@@ -31,6 +41,7 @@ int main()
     cout << "Nhap cac phan tu cua mang: ";
     inputArray(a,n);
     cout << "Max = " << MaxArray(a,n, a[0])<< endl;
+    cout << "Max = " << ln(a,n)<< endl;
 
 
 }
