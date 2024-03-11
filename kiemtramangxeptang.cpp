@@ -11,13 +11,13 @@ void inputArray(int a[], int n)
 bool checkTangDan(int a[], int n,int i)
 {
     if(i >= n-1)
-        return 0;
+        return 1;
     else
     {
         if(a[i] > a[i+1])
             return 0;
         else
-            return checkTangDan(a, n, i+=1);
+            return 1 * checkTangDan(a, n, i+=1);
     }
 }
 int main()
@@ -31,6 +31,6 @@ int main()
     if(checkTangDan(a, n, 0))
         cout << "Day so tang!" << endl;
     else
-        cout << "Day so k tang!" << endl;
+        cout << "Day so hong tang!" << endl;
 
 }
