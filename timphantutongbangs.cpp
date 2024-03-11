@@ -29,8 +29,8 @@ void inputArray(int a[], int n)
 //======`-.____`-.___\_____/___.-`____.-'======
 int find_equas_is_S(int a[], int n, int s)
 {
-    int x, ptu = 0, dem = 0, sum = 0;
-    if(s <= 0 || sum  == s)
+    int x, dem = 0;
+    if(s <= 0)
     {
         return 0;
     }
@@ -43,11 +43,13 @@ int find_equas_is_S(int a[], int n, int s)
             {
                 cout << a[j] << " ";
                 dem++;
+                break;
             }
 
         }
         if(dem == 0)
         {
+            cout << endl;
             return find_equas_is_S(a,n, x) ;
         }
         else

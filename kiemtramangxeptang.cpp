@@ -17,7 +17,7 @@ bool checkTangDan(int a[], int n)
         if(a[n - 1] < a[n-2])
             return 0;
         else
-            return 1 * checkTangDan(a, n-1);
+            return 1* checkTangDan(a, n-1);
     }
 }
 int main()
