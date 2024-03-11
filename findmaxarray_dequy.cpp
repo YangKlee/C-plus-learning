@@ -8,8 +8,18 @@ void inputArray(int a[], int n)
     }
     
 }
-int MaxArray(int a[], int n)
+int MaxArray(int a[], int n, int max)
 {
+    if(n == 0)
+        return max;
+    else    
+    {
+        if(a[n] > max)
+        {
+            max = a[n];
+        }
+        return MaxArray(a, n - 1, max);
+    }
     
 }
 int main()
@@ -20,5 +30,7 @@ int main()
     int a[n];
     cout << "Nhap cac phan tu cua mang: ";
     inputArray(a,n);
+    cout << "Max = " << MaxArray(a,n, a[0])<< endl;
+
 
 }
