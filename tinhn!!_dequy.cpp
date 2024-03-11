@@ -2,31 +2,23 @@
 using namespace std;
 int giaithua(int n)
 {
-    if(n == 0)
+    if(n == 0 || n == 1)
       return 1;
     else
     {
-        return giaithua(n-1) *n;
+
+      return giaithua(n-2) *n;
+
     }
       
 }
-int giaithuax2(int n)
-{
-    if(n <= 0)
-      return 1;
-    else
-    {
-      int x = giaithua(n);
-       return x * giaithuax2(x - 1);
-    }
 
-}
 
 int main()
 {
     int n;
     cin >> n;
     //cout << giaithua(giaithua(n)) << endl;
-    cout << giaithuax2(n) << endl;
+    cout << giaithua(n) << endl;
     
 }

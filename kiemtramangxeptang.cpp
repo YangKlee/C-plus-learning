@@ -11,7 +11,7 @@ void inputArray(int a[], int n)
 bool checkTangDan(int a[], int n,int i)
 {
     if(i >= n-1)
-        return 1;
+        return 0;
     else
     {
         if(a[i] > a[i+1])

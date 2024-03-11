@@ -7,6 +7,7 @@ int checkprime(int n, int i)
     {
         return 0;
     }
+
     else 
     {
         if(n==i)
