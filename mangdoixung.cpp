@@ -9,13 +9,13 @@ void input_Array(int a[], int n)
 }
 bool checkdoixung(int a[], int n, int k)
 {
-    if(k == 0)
+    if(n == 0 || n ==1)
     {
         return 1;
     }
     else
     {
-        if(a[abs(k - 1)] != a[abs((k - 1) -(n - 1))])
+        if(a[k-1]!=a[(k-1) - (n-1)])
         {
             return 0;
         }

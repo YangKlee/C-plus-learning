@@ -10,6 +10,7 @@ int dem_chu_so(int n)
 }
 int main()
 {
-    int n = 18072005;
+    int n;
+    cin >> n;
     cout << dem_chu_so(n) << endl;
 }

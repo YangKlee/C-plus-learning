@@ -10,14 +10,14 @@ void inputArray(int a[], int n)
 }
 bool checkTangDan(int a[], int n)
 {
-    if(n == 1 )
+    if(n <= 1 )
         return 1;
     else
     {
         if(a[n - 1] < a[n-2])
             return 0;
         else
-            return 1* checkTangDan(a, n-1);
+            return checkTangDan(a, n-1);
     }
 }
 int main()
