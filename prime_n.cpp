@@ -1,23 +1,15 @@
-#include "iostream"
-#include "math.h"
+#include <bits\stdc++.h>
 using namespace std;
+int InterestingQuiz(int a, int b)
+{
+    int k = log2((float)b)/log2((float)a);
+    while(pow(a,k) <= b)
+    {
+        k++;
+    }
+    return k;
+}
 int main()
 {
-    int n;
-    cin >> n;
-    for (int i = n; i >= 2 ; i--) {
-
-        int count = 0;
-        for (int j = 2; j <= sqrt(i) ; ++j) {
-            if(i % j == 0)
-                count ++;
-        }
-        if(count == 0)
-        {
-            cout << i;
-            break;
-        }
-
-
-    }
+    cout << InterestingQuiz(3,3520);
 }

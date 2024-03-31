@@ -1,30 +1,19 @@
 #include <bits/stdc++.h>
+long long mod = 1e9;
 using namespace std;
-long long giaithua(long long n)
-{
-    if(n == 1)
-        return 1;
-    else
-        return n * giaithua(n-1);
-}
+
 int main()
 {
-    long long n, gt;
+    int n, count = 0; 
     cin >> n;
-    int dem = 0;
-    gt= giaithua(n);
-    while(gt %10== 0)
+    int k = 5;
+    while(n/k != 0)
     {
-        if(gt %10== 0)
-        {
-            dem++;
-            gt /= 10;
-        }
+        count += n/k;
+        k *= 5;
 
-        else
-            break;
     }
-    cout << dem;
+    cout << count;
     
 
 }

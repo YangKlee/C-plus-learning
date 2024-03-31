@@ -25,8 +25,13 @@ void gray(int n, int k, int a[])
 int main()
 {
     int n;
-    int *a = new int[n];
     cin >> n;
-    gray(n,0, a);
-    cout << sum;
+    for (int i = 1; i <= pow(n,2); i++)
+    {
+        for(int j = 1; j <= n; j++)
+        {
+            
+        }
+    }
+    
 }

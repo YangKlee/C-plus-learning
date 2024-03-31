@@ -23,7 +23,7 @@ int main()
     int n, s;
     cout << "Nhap n: "; cin >> n;
     cout << "Nhap s: "; cin >> s;
-    int a[n];
+    int *a = new int[n];
     cout << "Nhap lan luot cac phan tu trong mang: ";
     input_Array(a,n);
     sum_is_s(a,n,s);

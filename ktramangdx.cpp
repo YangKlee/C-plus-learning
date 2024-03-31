@@ -18,7 +18,6 @@ bool KTDoiXung(int a[], int n)
         }
     }
     return true;
-    
 }
 int main()
 {
