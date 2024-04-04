@@ -1,37 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
-void array_out(int a[], int n)
-{
-    for (int i = 0; i < n; i++)
-    {
-        cout <<a[i];
-    }
-    cout << '\n';
-    
-}
-int sum = 0;
-void gray(int n, int k, int a[])
-{
-    for(int i = 0; i <= 1; i++)
-    {
-        a[k] = i;
-        if(k == n-1)
-            sum++;
-        else
-            gray(n,k+1,a);
-    }
 
+int create_bits(bool a[], int n, int k, int x)
+{
+    if(n == 0)
+        return 0;
+    else
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            if(k/2 <= i)
+            {
+                a[i-1] = 0;
+            }
+            else
+            {
+                a[i-1] = 1;
+            }
+            return create_bits(a[], n, k/2,)
+        }
+        
+    }
 }
+
+
 int main()
 {
     int n;
-    cin >> n;
-    for (int i = 1; i <= pow(n,2); i++)
+    //cin >> n;
+    int k = pow(2,n);
+    for (int i = 1; i <= pow(2,n); i++)
     {
-        for(int j = 1; j <= n; j++)
-        {
-            
-        }
+
     }
     
 }
