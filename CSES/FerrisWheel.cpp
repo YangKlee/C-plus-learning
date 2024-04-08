@@ -1,7 +1,7 @@
 //                _ooOoo_                          NAM MÔ A DI ĐÀ PHẬT !
 //               o8888888o
-//               88" . "88                Thí chủ con tên là Nguyễn Khánh Dương, sinh 18/07/2005
-//               (| -_- |)                    Ngụ tại Bùi Thị Xuân, Quy Nhơn, Bình Định
+//               88" . "88                
+//               (| -_- |)                  
 //                O\ = /O
 //            ____/`---'\____         Con lạy chín phương trời, con lạy mười phương đất
 //            .' \\| |// `.             Chư Phật mười phương, mười phương chư Phật
