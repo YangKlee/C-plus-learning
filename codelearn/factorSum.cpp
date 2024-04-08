@@ -53,4 +53,5 @@ int main()
     int n;
     cin >> n;
     cout << factorSum(n);
+    
 }
