@@ -14,4 +14,6 @@ int main()
     int ht_h1 = (h1_tren.first-h1_duoi.first)*(h1_tren.second - h1_duoi.second);
     int ht_h2 = (h2_tren.first-h2_duoi.first)*(h2_tren.second - h2_duoi.second);
     cout<< ht_h1 << ' ' << ht_h2; 
+    if( )
+    
 }
