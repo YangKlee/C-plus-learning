@@ -12,7 +12,7 @@ string Xapxepchucai(string a)
                 b.push_back(i);
             }
         }
-    }
+    }   
     return b;
 }
 

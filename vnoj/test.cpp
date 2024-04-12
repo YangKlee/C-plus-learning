@@ -1,15 +1,16 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+
 using namespace std;
-int main()
+
+int main() 
 {
-    set <int> cuc;
-    set <int> mai;
-    cuc.insert(150);
-    cuc.insert(200);
-    cuc.insert(250);
-    mai.insert(150);
-    mai.insert(200);
-    auto a = cuc.begin();
-    cout << a;
-    return 0;
+// huhu k hieu sao wa
+    int n;
+    cin >> n;
+    string s = "I want";
+    for(int i = 0; i < n; i++)
+    {
+        s.push_back(33);
+    }
+    cout << s ;
 }
