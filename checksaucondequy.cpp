@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 bool checkSauCon(string s1, string s2, int n, int m)
 {

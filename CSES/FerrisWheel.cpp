@@ -29,28 +29,22 @@ int main()
         weight.push_back(tmp);
     }
     sort(weight.begin(), weight.end());
-    int sum = 0, count = 0, cho = 0;
-    int i = weight.size()-1;
-    while(i >= 0)
+    int slot = 0, sum = 0, train = 0;
+    int i = 0;
+    int j  = weight.size()-1;
+    while(i <= j)
     {
-        if(weight[i] == x)
+        if(weight[i]+ weight[j] <= x)
         {
-            count++;
-            i--;
-        }
-        else if(sum >= x || cho ==2)
-        {
-            cho = 0;
-            count++;
-            sum = 0;
+            train++;
+            i++; j--;
         }
         else
         {
-            i--;
-            cho++;
-            sum += weight[i];
+            train++;
+            j--;
         }
     }
-    cout << count;
+    cout << train;
 
 }
