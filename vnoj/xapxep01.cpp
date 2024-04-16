@@ -33,4 +33,5 @@ int main()
     a = sort01(a);
     for(int x : a)
         cout << x << ' ';
+    
 }

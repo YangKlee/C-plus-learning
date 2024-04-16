@@ -13,6 +13,16 @@ int main()
 
     }
     sort(diff.begin(), diff.end());
-    cout << diff[diff.size()-1] - diff[diff.size()-2];
+    float min_diff = fabs(diff[1] - diff[0]);
+    for (int i = 1; i < n; i++)
+    {
+        float tmp = fabs(diff[i-1] - diff[i]);
+        if(tmp < min_diff)
+        {
+            min_diff = tmp;
+        }
+    }
+    cout << min_diff;
+    
     
 }
