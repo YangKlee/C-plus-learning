@@ -6,15 +6,18 @@ int BinarySearch(int a[], int x, int l, int r)
         return -1;
     else
     {
-        int m = (l+r)/2;
-        if(a[m] == x)
-            return m;
-        else
+        int privot = (l+r)/2;
+        if(a[privot] == x)
         {
-            if(a[m] > x)
-                return BinarySearch(a,x,l,m-1);
-            else
-                return BinarySearch(a,x,m+1,r);
+            return privot;
+        }
+        else if(a[privot] < x)
+        {
+            return BinarySearch(a,x,privot+1,r);
+        }
+        else if(a[privot] > x)
+        {
+            return BinarySearch(a,x,l,privot-1);
         }
     }
 }
