@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int n,  m;
+    long long n,  m;
     cin >> n >> m;
     int input;
     vector <int> price_ticket;
@@ -12,28 +12,22 @@ int main()
         cin >> input;
         price_ticket.push_back(input);
     }
+    vector<int>::iterator it;
+    sort(price_ticket.begin(), price_ticket.end(), greater<int>());
     for (int i = 0; i < m; i++)
     {
         cin >> input;
-        max_price.push_back(input);
+        it = lower_bound(price_ticket.begin(), price_ticket.end(), input, greater<int>());
+        if(it == price_ticket.end() )
+        {
+            cout << -1 << endl;
+        }
+        else
+        {
+            cout << *it << endl;
+        }
+        price_ticket.erase(it);
     }
     
-    sort(price_ticket.begin(), price_ticket.end());
-    //sort(max_price.begin(), max_price.end());
-    int i = 0, j = 0, recert_price = -1;
-    while(j <= max_price.size()-1)
-    {
-       if(max_price[j] >= price_ticket[i])
-       {
-            recert_price = price_ticket[i];
-            //price_ticket.erase(i);
-            i++;
-       } 
-       else if(max_price[j] < price_ticket[i] )
-       {
-            j++;
-            cout << recert_price << endl;
-            recert_price = -1;
-       }
-    }
+    
 }
