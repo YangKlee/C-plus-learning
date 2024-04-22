@@ -2,25 +2,32 @@
 using namespace std;
 int PhanHoach(vector <int> &a, int l, int r)
 {
+    // dat phan tu chot o giua
     int privot = a[(l+r)/2];
     int i = l, j = r;
     while(i <= j)
     {
-        while(a[i] < privot)
+        // i danh dau nhung phan tu > privot
+        while(a[i] < privot) 
             i++;
-        while(a[j] > privot)
+        // j danh dau nhung phan tu < privot
+        while(a[j] > privot) 
             j--;
+        // dieu kien doi cho khi i <= j
         if(i <= j)
-        {
-            swap(a[i], a[j]);
+        {   
+            // doi cho hai phan tu khong thoa man
+            swap(a[i], a[j]); 
             i++;
             j--;
         }
     }
+    // tra ve vi tri cua privot
     return i;
 }
 void QuickSort(vector <int> &a, int l, int r)
 {
+    
     int q = PhanHoach(a,l,r);
     if(l < q-1) QuickSort(a,l,q-1);
     if(q < r) QuickSort(a,q,r);
@@ -40,5 +47,4 @@ int main()
     {
         cout << x << ' ';
     }
-    
 }
