@@ -4,6 +4,7 @@ int PhanHoach(vector <int> &a, int l, int r)
 {
     // dat phan tu chot o giua
     int privot = a[(l+r)/2];
+    //cout << privot << endl;
     int i = l, j = r;
     while(i <= j)
     {
@@ -25,12 +26,21 @@ int PhanHoach(vector <int> &a, int l, int r)
     // tra ve vi tri cua privot
     return i;
 }
+void debug(vector <int> a)
+{
+    for(int x:a)
+        cout << x << ' ';
+}
 void QuickSort(vector <int> &a, int l, int r)
 {
-    
+    cout << "QuickSort " << ' ' << l << r <<endl;
     int q = PhanHoach(a,l,r);
+    cout << "PhanHoach " << ' ' << l << ' ' << r << " return q= " << q << endl;
+    debug(a);
+    cout << '\n';
     if(l < q-1) QuickSort(a,l,q-1);
     if(q < r) QuickSort(a,q,r);
+
 }
 int main()
 {

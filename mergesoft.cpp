@@ -26,6 +26,7 @@ void merge(vector <int> &a, int l, int m, int r)
     }
 
 }
+
 void mergeSoft(vector <int>&a, int l, int r)
 {
     if(l >= r) return ;
