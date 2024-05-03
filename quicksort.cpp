@@ -33,11 +33,11 @@ void debug(vector <int> a)
 }
 void QuickSort(vector <int> &a, int l, int r)
 {
-    //cout << "QuickSort " << ' ' << l << r <<endl;
+    cout << "QuickSort " << ' ' << l << r <<endl;
     int q = PhanHoach(a,l,r);
-    //cout << "PhanHoach " << ' ' << l << ' ' << r << " return q= " << q << endl;
-    //debug(a);
-    //cout << '\n';
+    cout << "PhanHoach " << ' ' << l << ' ' << r << " return q= " << q << endl;
+    debug(a);
+    cout << '\n';
     if(l < q-1) QuickSort(a,l,q-1);
     if(q < r) QuickSort(a,q,r);
 
