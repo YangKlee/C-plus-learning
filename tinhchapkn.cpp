@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 int calc_n_k(int n, int k)
