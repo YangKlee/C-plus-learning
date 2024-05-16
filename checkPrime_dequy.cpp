@@ -21,7 +21,7 @@ int checkprime(int n, int i)
             return checkprime(n,i-1);
         }
     }
-}11
+}
 int main()
 {
     int n;
