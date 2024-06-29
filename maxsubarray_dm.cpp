@@ -28,7 +28,7 @@ int main()
     }
     cout << "Tong lon nhat la: " << max_sum << endl;
     // truy vet
-    while(max_sum > 0)
+    while(max_sum != 0)
     {
         cout << a[max_sum_index] << ' ';
         max_sum -= a[max_sum_index];
