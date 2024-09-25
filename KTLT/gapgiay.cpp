@@ -4,10 +4,10 @@ int main()
 {
     long long cm;
     cin >> cm;
-    float solan = 0;
+    float solan = 1;
     if( cm <= 2)
         solan = 0;
     else
-        solan = (log(cm)/ log(2)) -1.0;
-    printf("%.0f", solan);
+        solan = log2(cm)  - 1.0;
+    cout << (long long)ceil(solan) << endl;
 }
