@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-unsigned long long int tinhLuyThua(long long a, long long n)
+long long tinhLuyThua(long long a, long long n)
 {
     if (n == 0)
         return 1;
@@ -17,9 +17,12 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    unsigned long long int a,b;
-    unsigned long long int k;
+    double a,b;
+    long long int k;
     cin >> a >> b >> k;
-    a = a*tinhLuyThua(10,k);
-    cout << (a/b)%10;
+
+    double result = a/b;
+    std::setprecision(100000);
+    //cout << result * pow(10,k);
+    cout << (long long)(result*tinhLuyThua(10,k))%10;
 }

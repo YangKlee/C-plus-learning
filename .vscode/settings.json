@@ -95,7 +95,22 @@
         "typeindex": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "any": "cpp",
+        "barrier": "cpp",
+        "coroutine": "cpp",
+        "expected": "cpp",
+        "memory_resource": "cpp",
+        "source_location": "cpp",
+        "string_view": "cpp",
+        "latch": "cpp",
+        "numbers": "cpp",
+        "semaphore": "cpp",
+        "spanstream": "cpp",
+        "stacktrace": "cpp",
+        "stdfloat": "cpp",
+        "syncstream": "cpp",
+        "variant": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
 
