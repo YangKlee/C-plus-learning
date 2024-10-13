@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-long long tinhLuyThua(long long a, long long n)
+unsigned long long int tinhLuyThua(double a, long long n)
 {
     if (n == 0)
         return 1;
@@ -18,11 +18,8 @@ int main()
     cin.tie(NULL);
     cout.tie(NULL);
     double a,b;
-    long long int k;
+    unsigned long long int k;
     cin >> a >> b >> k;
-
-    double result = a/b;
-    std::setprecision(100000);
-    //cout << result * pow(10,k);
-    cout << (long long)(result*tinhLuyThua(10,k))%10;
+    double result = (double)a / (double)b;
+    cout <<(long long) (result * tinhLuyThua(10, k))% 10 ;
 }
