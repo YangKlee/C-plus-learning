@@ -81,7 +81,7 @@ string nhanHaiChuSo(string a, string b)
 int main()
 {
     // test
-    cout << nhanHaiChuSo("1807", "2005");
+    //cout << nhanHaiChuSo("1807", "2005");
     string n = "";
     do
     {
