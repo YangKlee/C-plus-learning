@@ -2,11 +2,12 @@
 using namespace std;
 class NhanVien
 {
-public:
+private:
     string ten;
     int namSinh;
     int soNamLamViec;
     float heSoLuong;
+public:
     NhanVien(){};
     NhanVien(string ten, int namSinh) // constuctor
     {

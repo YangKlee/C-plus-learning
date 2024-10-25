@@ -28,7 +28,7 @@ string nhanMotChuSo(string n, char x)
 }
 string congChuoi(string a, string b)
 {
-    while(a.size() < b.size())
+    while(a.size() < b.size()) 
         a.insert(a.begin(), '0');
     while(a.size() > b.size())
         b.insert(b.begin(), '0');
@@ -58,15 +58,10 @@ string congChuoi(string a, string b)
 }
 string nhanHaiChuSo(string a, string b)
 {
-    string result = "0";
+    string result = "";
     string tmp1 =  "";
-    //string tmp2 = "";
-    while(a.size() < b.size())
-        a.insert(a.begin(), '0');
-    while(a.size() > b.size())
-        b.insert(b.begin(), '0');
     int count = 0;
-    for (int i = b.size() - 1; i >= 0; i++)
+    for (int i = b.size() - 1; i >= 0; i--)
     {
         tmp1 = nhanMotChuSo(a, b[i]);
         for (int j = 0; j < count; j++)
@@ -78,14 +73,27 @@ string nhanHaiChuSo(string a, string b)
     }
     return result;
 }
+string tinhMuBon(string n)
+{
+    string result = n;
+    for (int i = 0; i < 3; i++)
+    {
+        result = nhanHaiChuSo(result,n);
+    }
+    return result;
+}
 int main()
 {
-    // test
-    //cout << nhanHaiChuSo("1807", "2005");
+
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
     string n = "";
     do
     {
         cin >> n;
+        if (n != "0")
+            cout << tinhMuBon(n) << "\n";
     } while (n != "0");
-
+    
 }
