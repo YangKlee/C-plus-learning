@@ -31,6 +31,16 @@ vector <float> thuatToanA(vector <float> h, vector <float> s)
     }
     return kq;
 }
+float danhGia(vector <float> h, vector <float> kq)
+{
+    float result = 0;
+    float sum = 0;
+    for (int i = 0; i < h.size(); i++)
+    {
+        sum += fabs(h[i] - kq[i]);
+    }
+    return sum/(float)h.size();
+}
 vector <float> thuatToanB(vector <float> &h, vector <float> s)
 {
     sort(h.begin(), h.end(), greater());
@@ -61,6 +71,8 @@ int main()
     }
     cout << "Ket qua thuat toan A" << endl;
     show(h, thuatToanA(h,s));
+    cout << "Danh gia chenh lech: " << danhGia(h,thuatToanA(h,s)) << endl; 
     cout << "Ket qua thuat toan B" << endl;
     show(h, thuatToanB(h,s));
+    cout << "Danh gia chenh lech: " << danhGia(h,thuatToanB(h,s)) << endl; 
 }
