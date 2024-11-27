@@ -1,0 +1,1 @@
+{"name":"Local: vitri","url":"d:\\C++\\C-plus-learning\\KTLT\\vitri.cpp","tests":[{"id":1732585945886,"input":"4 3\n1 2 3 4\n2 4 5","output":"2\n4\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\C-plus-learning\\KTLT\\vitri.cpp","group":"local","local":true}

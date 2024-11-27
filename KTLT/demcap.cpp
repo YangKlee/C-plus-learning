@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
+#define long long int;
 using namespace std;
+
 int searchBinary(vector <int> a, int l, int r, int x, int pos)
 {
-    if (a[a.size() - 1] < x || a[0] > x)
-        return -1;
     if (l > r)
         return pos;
     else
@@ -12,7 +12,7 @@ int searchBinary(vector <int> a, int l, int r, int x, int pos)
         if (a[m] == x)
         {
             pos = m;
-            return searchBinary(a, l, m-1, x, pos);
+            return pos;
         }
         else if (a[m] > x)
         {
@@ -26,25 +26,39 @@ int searchBinary(vector <int> a, int l, int r, int x, int pos)
 }
 int main()
 {
-    ios_base::sync_with_stdio(false);
+    ios::sync_with_stdio(false);
     cin.tie(NULL);
     cout.tie(NULL);
-    int n, q;
-    cin >> n >> q;
+    int n, x;
+    cin >> n >> x;
     vector <int> a(n);
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
     }
-    for (int i = 0; i < q; i++)
+    // ai = x - aj
+    int range;
+    if ((n - 1) %2 == 0)
+        range = (n-1)/2;
+    else
+        range = ((n-1)/2) +1;
+    int dem = 0;
+    sort(a.begin(), a.end());
+    for (int i = 0; i < range; i++)
     {
-        int tmp;
-        cin >> tmp;
-        int pos = searchBinary(a, 0, n-1, tmp, -1);
-        if (pos == -1)
-            cout << pos << endl;
+        
+        int pos;
+        int pbu = x - a[i];
+        if (pbu < a[range] || pbu > a[n -1])
+            pos = -1;
         else
-            cout << pos+1 << endl;
-        // query
+            pos = searchBinary(a, range , n - 1, pbu, -1);
+        if (pos != -1)
+        {
+            
+            dem++;
+        }
+
     }
+    cout << dem << endl;
 }
