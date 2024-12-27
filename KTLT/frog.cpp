@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+    #include <bits/stdc++.h>
 using namespace std;
 long long jump(int n, vector <int> h, vector <long long> cost)
 {
@@ -7,6 +7,10 @@ long long jump(int n, vector <int> h, vector <long long> cost)
     for (int i = 3 ;i <= n; i++)
     {
         cost[i] = (long long)min(cost[i-1] + abs(h[i] - h[i-1]), cost[i-2] + abs(h[i] - h[i-2]));
+    }
+    for (int i : cost)
+    {
+        cout << i << endl;
     }
     return cost[n];
 }

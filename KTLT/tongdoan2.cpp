@@ -26,9 +26,9 @@ int main()
             cin >> left >> right;
             //cout << right << left << endl;
             //cout << prefx[0] << "-" << prefx[2] << endl ;
-            if (left== 0)
-                cout << prefx[right] <<endl;
+            if (left== 1)
+                cout << prefx[right-1] <<endl;
             else
-                cout << prefx[right] - prefx[left-1] << endl;
+                cout << prefx[right-1] - prefx[left-2] << endl;
         }
 }

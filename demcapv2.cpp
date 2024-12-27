@@ -34,7 +34,7 @@ int firstBinarySearch(vtll a, int l, int r, int x)
 int main()
 {
     IOS;
-    bool isUseFile = 1;
+    bool isUseFile = 0;
     if (isUseFile == 1)
     {
         freopen("socap.inp","r",stdin);
