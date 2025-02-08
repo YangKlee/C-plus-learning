@@ -1,0 +1,1 @@
+{"name":"Local: MuaVe","url":"d:\\C++\\C-plus-learning\\KTLT\\MuaVe.cpp","tests":[{"id":1737038463386,"input":"5\n2 5 7 8 4\n4 9 10 10","output":"18"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\C++\\C-plus-learning\\KTLT\\MuaVe.cpp","group":"local","local":true}
