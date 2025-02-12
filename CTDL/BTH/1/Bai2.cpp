@@ -1,5 +1,6 @@
 #include <iostream>
 #include <set>
+#include <string>
 using namespace std;
 
 // hàm tính trung bình cộng các số trong mảng
@@ -8,7 +9,7 @@ float avgArr(int a[], int n)
     float sum = 0;
     for (int i = 0; i < n; i++)
     {
-        sum+= i;
+        sum+= a[i];
     }
     return sum / n;
 }
@@ -102,21 +103,48 @@ int countArr(int a[], int n, int b[], int d[])
 // in mang
 void displayArr(int a[], int n)
 {
+    
     for (int i = 0; i < n; i++)
     {
-        cout << a[i] << " ";
+        cout << a[i] <<  " ";
     }
     cout << "\n";
 }
 
 int main()
 {
-    int n, m;
+    int n, m, x;
     cout << "Nhap so phan tu mang a: ";
     cin >> n;
     int* a = new int[n];
     for (int i = 0; i < n; i++)
     {
-
+        cin >> a[i];
     }
+    cout << "Nhap so phan tu mang b: ";
+    cin >> m;
+    int* b = new int[m];
+    for (int i = 0; i < m; i++)
+    {
+        cin >> b[i];
+    }
+    cout << "Trung binh cong mang a: " << avgArr(a, n) << endl;
+    cout << "Trung binh cong mang b: " << avgArr(b, m) << endl;
+    cout << "Nhap so nguyen X: " ; cin >> x;
+    if (findArr(a, n, x))
+    {
+        cout << "So nguyen x ton tai trong mang a" << endl;
+    }
+    else
+    {
+        cout << "So nguyen x khong ton tai trong mang a" << endl;
+    }
+    sortArr(a, n);
+    cout << "Mang A da sap xep: " ; displayArr(a, n);
+    sortArr(b, m);
+    cout << "Mang A da sap xep: " ; displayArr(b, m);
+    int c[1000];
+    int l = mergeArr(a, n, b, m, c);
+    cout << "Mang gop cua mang A va B la: " ; displayArr(c, l) ;
+    return 0;
 }
