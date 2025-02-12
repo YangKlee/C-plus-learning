@@ -146,5 +146,14 @@ int main()
     int c[1000];
     int l = mergeArr(a, n, b, m, c);
     cout << "Mang gop cua mang A va B la: " ; displayArr(c, l) ;
-    return 0;
+    
+    int num[1000];
+    int sl[1000];
+    cout << "So lan xuat hien cua tung phan tu trong mang A la: ";
+    int d_size = countArr(a, n, num, sl);
+    cout << "So" << "\t" << "So lan" << endl;
+    for (int i = 0; i < d_size; i++)
+    {
+        cout << num[i] << "\t" << sl[i] << endl;
+    }
 }
