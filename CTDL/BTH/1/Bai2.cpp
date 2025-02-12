@@ -1,4 +1,5 @@
 #include <iostream>
+#include <set>
 using namespace std;
 
 // hàm tính trung bình cộng các số trong mảng
@@ -38,9 +39,9 @@ void sortArr(int a[], int n)
     }
 }
 // gộp 2 mảng tăng dần
-void mergeArr(int a[], int n, int b[], int m, int c[], int &y)
+int mergeArr(int a[], int n, int b[], int m, int c[])
 {
-    c = new int[n+m];
+    //c = new int[n+m];
     int i = 0, j = 0, k = 0;
     while (i < n && j < m)
     {
@@ -65,16 +66,57 @@ void mergeArr(int a[], int n, int b[], int m, int c[], int &y)
         c[k] = b[j];
         j++; k++;
     }
+    return n + m; // trả về kích thước mảng c
 
 }
-// 
-// in mang
-void display(int a[], int n)
+// Đếm số lần xuất hiện từng số trong mảng.
+int countArr(int a[], int n, int b[], int d[])
 {
-
+    set <int> tmp;
+    for (int i = 0; i < n; i++)
+    {
+        tmp.insert(a[i]);
+    }
+    // copy tu set qua mang b
+    int tmp_i = 0;
+    for (int x : tmp)
+    {
+        b[tmp_i] = x;
+        tmp_i++;
+    }
+    //c = new int[tmp_i +1];
+    for (int i = 0; i <= tmp_i; i++)
+    {
+        int count = 0;
+        for (int j = 0; j < n; j++)
+        {
+            if (a[j] == b[i])
+            {
+                count++;
+            }
+        }
+        d[i] = count;
+    }
+    return tmp_i+1;
+}
+// in mang
+void displayArr(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        cout << a[i] << " ";
+    }
+    cout << "\n";
 }
 
 int main()
 {
+    int n, m;
+    cout << "Nhap so phan tu mang a: ";
+    cin >> n;
+    int* a = new int[n];
+    for (int i = 0; i < n; i++)
+    {
 
+    }
 }
