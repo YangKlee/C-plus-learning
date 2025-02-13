@@ -34,7 +34,6 @@ void appendDynamicArr(int *arr, int &n, int x)
     *(new_arr + n) = x;
     n += 1;
     arr = new int[n];
-    //printDynamicArr(new_arr, n);
     arr = startArr;   
     for (int i = 0; i < n; i++)
     {
@@ -42,7 +41,6 @@ void appendDynamicArr(int *arr, int &n, int x)
         arr++; new_arr++;
     }
     arr = startArr;
-    
 }
 int main()
 {
