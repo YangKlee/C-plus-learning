@@ -13,6 +13,7 @@ void inputArr2D(int arr[][MAXCOLS], int m, int n)
             cin >> arr[i][j];
         }
     }
+    
 }
 //In một mảng 2 chiều với số dòng m, số cột n.
 void printArr2D(int arr[][MAXCOLS], int m, int n)
