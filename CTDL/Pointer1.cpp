@@ -3,12 +3,10 @@ using namespace std;
 int main()
 {
     int *p = new int;
-    *p = 10;
-    // Print the value of p and the value pointed to by p
-    cout << "p = " << p << ", *p = " << *p << endl;
+    cout << "p = " << p <<  endl;
     delete p;
-    cout << "p = " << p << ", *p = " << *p << endl;
-    p = nullptr;
-    cout << "p = " << p << ", *p = " << *p << endl;
+    cout << "p = " << p <<  endl;
+    p = new int;
+    cout << "p = " << p <<  endl;
 
 }
