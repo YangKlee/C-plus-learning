@@ -103,9 +103,9 @@ int main()
     }
     int rowMax = -1, colMax = -1;
     int max = maxArr2D(a.arr, a.m, a.n, rowMax, colMax);
-    printf("So lon nhat cua ma tran A la %d va nam o dong %d cot %d ", max, rowMax +1, colMax +1 );
+    printf("So lon nhat cua ma tran A la %d va nam o dong %d cot %d \n ", max, rowMax +1, colMax +1);
     max = maxArr2D(b.arr, b.m, b.n, rowMax, colMax);
-    printf("So lon nhat cua ma tran B la %d va nam o dong %d cot %d ", max, rowMax +1, colMax +1 );
+    printf("So lon nhat cua ma tran B la %d va nam o dong %d cot %d \n ", max, rowMax +1, colMax +1 );
     cout << "Ket qua A * B: " << endl;
     if (a.n != b.m)
     {

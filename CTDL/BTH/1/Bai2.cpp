@@ -73,32 +73,33 @@ int mergeArr(int a[], int n, int b[], int m, int c[])
 // Đếm số lần xuất hiện từng số trong mảng.
 int countArr(int a[], int n, int b[], int d[])
 {
-    set <int> tmp;
-    for (int i = 0; i < n; i++)
-    {
-        tmp.insert(a[i]);
+    int pirvot = 0;
+    for (int i = 0; i < n; i++){
+        int contain = 0;
+        for (int j = 0; j <= pirvot; j++)
+        {
+            if (a[i] == b[j])
+            {
+                contain = 1;
+            }
+        }
+        if (!contain)
+        {
+            b[pirvot] = a[i];
+            pirvot++;
+        }
     }
-    // copy tu set qua mang b
-    int tmp_i = 0;
-    for (int x : tmp)
-    {
-        b[tmp_i] = x;
-        tmp_i++;
-    }
-    //c = new int[tmp_i +1];
-    for (int i = 0; i <= tmp_i; i++)
+    for (int i = 0; i <= pirvot; i++)
     {
         int count = 0;
         for (int j = 0; j < n; j++)
         {
             if (a[j] == b[i])
-            {
                 count++;
-            }
         }
         d[i] = count;
     }
-    return tmp_i+1;
+    return pirvot ;
 }
 // in mang
 void displayArr(int a[], int n)
@@ -151,7 +152,7 @@ int main()
     int sl[1000];
     cout << "So lan xuat hien cua tung phan tu trong mang A la: ";
     int d_size = countArr(a, n, num, sl);
-    cout << "So" << "\t" << "So lan" << endl;
+    cout << "So lan" << endl;
     for (int i = 0; i < d_size; i++)
     {
         cout << num[i] << "\t" << sl[i] << endl;
