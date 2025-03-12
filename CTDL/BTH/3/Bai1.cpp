@@ -95,7 +95,37 @@ void deleteCustomerByName(ListOfCustomers &list, string name)
         }
     }
 }
+bool isContainNumberPhone(Customer c, string phone)
+{
+    for (string number : c.phoneNumbers)
+    {
+        if (number == phone)
+            return true;
+    }
+    return false;
+}
 // Tìm khách hàng theo số điện thoại
+int findCustomerByPhone(ListOfCustomers list, string phone)
+{
+    for (int i = 0; i < list.numOfCustomers ; i++)
+    {
+        if (isContainNumberPhone(list.arrCustomers[i], phone))
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+//hàm xóa một số điện thoại cụ thể của khách hàng trong danh sách.
+void deletePhone(ListOfCustomers &list, string phone)
+{
+
+}
+// 
+void mergeCustomer(ListOfCustomers &list, Customer c)
+{
+    
+}
 int main()
 {
     ListOfCustomers listCus;
