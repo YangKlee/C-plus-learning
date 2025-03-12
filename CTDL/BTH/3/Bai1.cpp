@@ -32,7 +32,7 @@ void inputCustomer(Customer &c)
 // nhap tu file
 void inputListOfCustomerFromFile(ListOfCustomers &list)
 {
-    ifstream fin("customer.txt");
+    ifstream fin("inp.txt");
     string rawData;
     while (getline(fin, rawData))
     {
@@ -45,6 +45,7 @@ void inputListOfCustomerFromFile(ListOfCustomers &list)
             cs.phoneNumbers.pb(phone);
         list.arrCustomers[list.numOfCustomers] = cs;
         list.numOfCustomers +=1;
+        ss.clear();
     }
     fin.close();
 }
@@ -104,6 +105,17 @@ bool isContainNumberPhone(Customer c, string phone)
     }
     return false;
 }
+int findContainCustomer(ListOfCustomers list, Customer c)
+{
+    for (int i = 0; i < list.numOfCustomers; i++)
+    {
+        if (list.arrCustomers[i].name == c.name && list.arrCustomers[i].address == c.address)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
 // Tìm khách hàng theo số điện thoại
 int findCustomerByPhone(ListOfCustomers list, string phone)
 {
@@ -119,19 +131,50 @@ int findCustomerByPhone(ListOfCustomers list, string phone)
 //hàm xóa một số điện thoại cụ thể của khách hàng trong danh sách.
 void deletePhone(ListOfCustomers &list, string phone)
 {
-
+    for (int i = 0; i < list.numOfCustomers; i++)
+    {
+        for (int k = 0; k < list.arrCustomers[i].phoneNumbers.size(); k++)
+        {
+            if (list.arrCustomers[i].phoneNumbers[k] == phone)
+            {
+                list.arrCustomers[i].phoneNumbers.erase(list.arrCustomers[i].phoneNumbers.begin() + k);
+                return;
+            }
+        }
+    }
 }
-// 
+//
 void mergeCustomer(ListOfCustomers &list, Customer c)
 {
-    
+    int index = findContainCustomer(list, c);
+    if (index != -1 )
+    {
+        for (int k = 0; k < c.phoneNumbers.size(); k++)
+        {
+            if (!isContainNumberPhone(list.arrCustomers[index], c.phoneNumbers[k]))
+            {
+                list.arrCustomers[index].phoneNumbers.pb(c.phoneNumbers[k]);
+            }
+        }
+    }
+    else
+    {
+        list.arrCustomers[list.numOfCustomers] = c;
+        list.numOfCustomers += 1;
+    }
 }
 int main()
 {
     ListOfCustomers listCus;
     //inputListOfCustomers(listCus);
     inputListOfCustomerFromFile(listCus);
+    //outputListOfCustomers(listCus);
+    //deleteCustomerByName(listCus, "Nam");
+    Customer test;
+    test.name = "Nguyen Yen Nhi";
+    test.address = "Tuy Phuoc, Binh Dinh";
+    test.phoneNumbers.push_back("1234");
+    mergeCustomer(listCus, test);
     outputListOfCustomers(listCus);
-    deleteCustomerByName(listCus, "Nam");
-    outputListOfCustomers(listCus);
+
 }
