@@ -32,7 +32,7 @@ void inputCustomer(Customer &c)
 // nhap tu file
 void inputListOfCustomerFromFile(ListOfCustomers &list)
 {
-    ifstream fin("inp.txt");
+    ifstream fin("customer.txt");
     string rawData;
     while (getline(fin, rawData))
     {
@@ -116,6 +116,17 @@ int findContainCustomer(ListOfCustomers list, Customer c)
     }
     return -1;
 }
+int findCustomerByName(ListOfCustomers list, string name)
+{
+    for (int i = 0; i < list.numOfCustomers ; i++)
+    {
+        if (list.arrCustomers[i].name == name)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
 // Tìm khách hàng theo số điện thoại
 int findCustomerByPhone(ListOfCustomers list, string phone)
 {
@@ -143,6 +154,12 @@ void deletePhone(ListOfCustomers &list, string phone)
         }
     }
 }
+// thêm một số điện thoại cho một khách hàng có tên cho trước
+void appendPhone(ListOfCustomers &list, string name, string phone)
+{
+    int i = findCustomerByName(list, name);
+    list.arrCustomers[i].phoneNumbers.pb(phone);
+}
 //
 void mergeCustomer(ListOfCustomers &list, Customer c)
 {
@@ -166,15 +183,26 @@ void mergeCustomer(ListOfCustomers &list, Customer c)
 int main()
 {
     ListOfCustomers listCus;
-    //inputListOfCustomers(listCus);
-    inputListOfCustomerFromFile(listCus);
+    inputListOfCustomers(listCus); 
+    //inputListOfCustomerFromFile(listCus);
     //outputListOfCustomers(listCus);
-    //deleteCustomerByName(listCus, "Nam");
+    cout << "Khach hang co so dien thoai 0912345678 la:" << endl;
+    int index = findCustomerByPhone(listCus, "0912345678");
+    if (index != -1)
+    {
+        outputCustomer(listCus.arrCustomers[index]);
+    }
+    else
+    {
+        cout << "Khong tim thay khach hang" << endl;
+    }
+    deletePhone(listCus, "0912345678" );
+    deleteCustomerByName(listCus, "Nam");
+    appendPhone(listCus, "An", "0989123456");
     Customer test;
     test.name = "Nguyen Yen Nhi";
     test.address = "Tuy Phuoc, Binh Dinh";
     test.phoneNumbers.push_back("1234");
     mergeCustomer(listCus, test);
     outputListOfCustomers(listCus);
-
 }
