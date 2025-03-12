@@ -1,0 +1,10 @@
+Nguyen Van A,20,8
+Nguyen Van B,20,5
+Nguyen Van C,20,3
+Nguyen Van D,20,3.6
+Nguyen Van E,20,3
+Nguyen Van F,20,7
+Nguyen Van G,20,7
+Nguyen Van H,20,5
+Nguyen Van I,20,2
+Nguyen Van J,20,10
