@@ -12,7 +12,9 @@ void inputStudent(struct Student &s)
 {
     cout << "Name: " ; getline(cin, s.name);
     cout << "Age: "; cin >> s.age;
+    cin.ignore();
     cout << "GPA: "; cin >> s.gpa;
+    cin.ignore();
 }
 // print a student
 void printStudent(struct Student s)
@@ -24,6 +26,7 @@ void printStudent(struct Student s)
 // input an aray of student
 void inputListOfStudent(struct Student list[], int n)
 {
+    
     for (int i = 0; i < n; i++)
     {
         fflush(stdin);
@@ -80,12 +83,13 @@ int countFirstName(struct Student list[], int n)
 // doi ten len dau
 string convertName(string name)
 {
-    int i = 0;
+    int i = name.length()-1;
     string ten = "";
     while (name[i] != ' ')
     {
         ten = name[i] + ten;
         name.erase(i);
+        i--;
     }
     return ten + " " + name;
 }
@@ -94,15 +98,15 @@ void sortVNName(struct Student list[], int n)
 {
     for (int i = 0; i < n; i++)
     {
+        list[i].name = convertName(list[i].name);
+    }
+    for (int i = 0; i < n; i++)
+    {
         for (int j = i+1; j < n - 1; j++)
         {
-            list[i].name = convertName(list[i].name);
-            list[j].name = convertName(list[j].name);
             if (list[i].name[0] > list[j].name[0])
             {
-                Student tmp = list[j];
-                list[i] = list[j];
-                list[j] = tmp;
+                swap(list[i], list[j]);
             }
         }
     }
@@ -110,9 +114,30 @@ void sortVNName(struct Student list[], int n)
 int main()
 {
     Student list[100];
-    freopen("input.inp","r",stdin);
+    //freopen("input.txt","r",stdin); // co co the nhap du lieu tu file input.inp de tiet kiem thoi gian
+    cout << "Nhap n: ";
     int n; cin >> n;
+    cin.ignore();
     
     inputListOfStudent(list, n);
+    cout << "Da nhap xong" << endl;
+    //cout <<"Thong tin hoc sinh da nhap: "<< endl;
+    //printListOfStudent(list, n);
+    cout << "================================" << endl;
+    cout << "Danh sach sinh vien co GPA >= 8" << endl;
+    listOfGoodStudents(list, n);
+    cout << "================================" << endl;
+    cout << "Nhap thong tin sinh vien can them: " << endl;
+    Student tmp ;
+    inputStudent(tmp);
+    n = appdendStudent(list, n, tmp);
+    cout << "Da nhap xong" << endl;
+    cout << "================================" << endl;
+    cout << "Danh sach sinh vien sau khi them " << endl;
+    printListOfStudent(list, n);
+    cout << "So nguoi ho Nguyen trong mang sinh vien la:" << countFirstName(list, n) << endl;
+    cout << "================================" << endl;
+    cout << "Danh sach ten da sap xep" << endl;
+    sortVNName(list, n);
     printListOfStudent(list, n);
 }

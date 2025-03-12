@@ -1,0 +1,37 @@
+11
+Nguyen Yen Nhi
+20
+8.2
+Nguyen Khanh Duong
+20
+7.2
+Tran Thanh Cuong
+24
+6.2
+Nguyen Huu Vo Duy
+20
+9
+Bui Thi Ngoc Anh
+20
+8.9
+Tran Ngoc Toan
+24
+8.01
+Le Ba Dat
+20
+8.5
+Nguyen Quynh Hoai Huong
+18
+7.2
+Nguyen Van F
+24
+6.2
+Nguyen Van Khanh
+20
+5.2
+Le Ngo Dong Gun
+20
+8.1
+Le Minh Phat
+22
+8.5
