@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <math.h>
+#define nullptr NULL
 using namespace std;
 struct Node{
     int coefficient;
@@ -13,11 +14,11 @@ void insertFirst(Node* &head, int coef, int expo) {
     newP->exponent = expo;
     newP->next = head;
     head = newP;
-    cout << "Insert complete" << endl;
+    //cout << "Insert complete" << endl;
 }
 //Hàm in một đa thức lên màn hình
 void print(Node* head) {
-    cout << "Da thuc P la: ";
+
     bool isFirst = true;
     while (head != nullptr)
     {
@@ -140,7 +141,22 @@ Node* nhanDaThuc(Node* poly1 , Node* poly2){
         poly1 = poly1->next;
     }
     return result;
-    
+}
+// Dao ham
+Node* derivative(Node* poly) {
+    Node* result = nullptr;
+    Node* last = nullptr;
+    while (poly != nullptr)
+    {
+        if (poly->exponent > 0)
+        {
+            last = insertNext(last, poly->coefficient * poly->exponent, poly->exponent - 1);
+        }
+        if (result == nullptr)
+            result = last;
+        poly = poly->next;
+    }
+    return result;
 }
 int main()
 {
@@ -154,7 +170,13 @@ int main()
     insertFirst(p2, 3,4);
     insertFirst(p2, 2,2);
     insertFirst(p2, 2,1);
-
+    cout << "p1 = ";
+    print(p1);
+    cout << "p2 = ";
+    print(p2);
+    cout << "Dao ham da thuc p1: ";
+    print(derivative(p1));
+    cout << "Phep nhan da thuc p1 * p2:";
     print(nhanDaThuc(p1, p2));
 
 }

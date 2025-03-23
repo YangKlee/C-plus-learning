@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.embeddedhtml": "html",
         "iostream": "cpp",
         "ostream": "cpp",
         "xstring": "cpp",
@@ -111,7 +112,9 @@
         "stdfloat": "cpp",
         "syncstream": "cpp",
         "variant": "cpp",
-        "text_encoding": "cpp"
+        "text_encoding": "cpp",
+        "generator": "cpp",
+        "print": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
 
