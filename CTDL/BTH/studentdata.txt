@@ -1,5 +1,5 @@
 Nguyen Van A,20,8
-Nguyen Van B,20,5
+Nguyen Van B,20,5.2
 Nguyen Van C,20,3
 Nguyen Van D,20,3.6
 Nguyen Van E,20,3
