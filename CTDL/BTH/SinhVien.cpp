@@ -9,6 +9,7 @@ struct Student{
 	string name;
 	int age;
 	double gpa;
+
 };
 struct SLLStudents{
 	Student data;
@@ -55,6 +56,94 @@ Node* goodStudent(Node* head)
 	}
 	return result;
 }
+Node* findByName(Node *head, string name)
+{
+	while (head != nullptr)
+	{
+		if (head->data.name == name)
+			return head;
+		head = head->next;
+	}
+	
+}
+void deleteByName(Node* &head, string name)
+{
+	// phan tu can xoa nam dau tien
+	if (head->data.name == name)
+	{
+		head = head->next;
+		
+	}
+	else
+	{
+		Node* tmp = head->next;
+		Node* last = head;
+		while(tmp!= nullptr)
+		{
+			if (tmp->data.name == name)
+			{
+				
+				last->next = tmp->next;
+				delete tmp;
+			}
+			tmp = tmp->next;
+			last = last->next;
+		}
+	}
+
+}
+// them sinh vien vao vi tri k (k so nguyen)
+void insertK(Node* &head, Student st, int k)
+{
+	Node* newSt = new Node();
+	newSt->data = st;
+	if (k == 1) // dau
+	{
+		newSt->next = head;
+		head = newSt;
+	}
+	else
+	{
+		int count = 1;
+		Node* tmp = head;
+		while (tmp!=nullptr)
+		{
+			if (count == k)
+			{
+				newSt->next = tmp->next;
+				tmp->next = newSt;
+				return;
+			}
+			count++;
+			tmp = tmp->next;
+		}
+	}
+}
+void deleteK(Node* &head, int k)
+{
+	if (k == 1)
+	{
+		head = head->next;
+	}
+	else
+	{
+		Node* tmp = head->next;
+		Node* last = head;
+		int count = 2;
+		while (tmp != nullptr)
+		{
+			if (count == k)
+			{
+				last->next = tmp->next;
+				delete tmp;
+				return;
+			}
+			count++;
+			tmp = tmp->next;
+			last = last->next;
+		}
+	}
+}
 void printStudent(Node* head)
 {
 	while (head != nullptr )
@@ -68,7 +157,14 @@ int main()
 	
 	Node* ds = readFile("studentdata.txt");
 	
-	printStudent(goodStudent(ds));
+	//deleteByName(ds, "Nguyen Van C");
+	Student newSt ;
+	newSt.name = "Shikanoko";
+	newSt.gpa = 2.2;
+	newSt.age = 16;
+	insertK(ds, newSt, 9);
+	deleteK(ds, 10);
+	printStudent(ds);
 }
 
 
