@@ -144,6 +144,64 @@ void deleteK(Node* &head, int k)
 		}
 	}
 }
+
+void softGPADecrease(Node* head)
+{
+
+	while (head != nullptr)
+	{
+		Node* next = head->next;
+		while(next != nullptr)
+		{
+			if (head->data.gpa < next->data.gpa)
+			{
+				swap(head->data, next->data );
+			}
+			next = next->next;
+		}
+		head = head->next;
+	}
+}
+Node* mergeOfStudent(Node* a, Node* b)
+{
+	Node* result = nullptr;
+	Node* last = nullptr;
+	while (a != nullptr && b != nullptr)
+	{
+		if (a->data.gpa < b->data.gpa)
+		{
+			last = insertLast(last, b->data);
+			b = b->next;
+		}
+		else if(a->data.gpa > b->data.gpa)
+		{
+			last = insertLast(last, a->data);
+			a = a->next;
+		}
+		else
+		{
+			last = insertLast(last, a->data);
+			if (result == nullptr)
+				result = last;
+			last = insertLast(last, b->data);
+			a = a->next;
+			b = b->next;
+		}
+		if (result == nullptr)
+			result = last;
+	}
+	while (a!=nullptr)
+	{
+		last = insertLast(last, a->data);
+		a = a->next;
+	}
+	while (b!=nullptr)
+	{
+		last = insertLast(last, b->data);
+		b = b->next;
+	}
+	return result;
+}
 void printStudent(Node* head)
 {
 	while (head != nullptr )
@@ -163,8 +221,11 @@ int main()
 	newSt.gpa = 2.2;
 	newSt.age = 16;
 	insertK(ds, newSt, 9);
-	deleteK(ds, 10);
-	printStudent(ds);
+
+	softGPADecrease(ds);
+	Node* ds1 = readFile("studentdata.txt");
+	softGPADecrease(ds1);
+	printStudent(mergeOfStudent(ds, ds1));
 }
 
 
