@@ -111,8 +111,24 @@ int countAfterAWord(Tree *root, string word)
     else
     {
         Tree* target = findWord(root, word);
-        return countWord(target->left) + countWord(target->right);
+        if(target != nullptr)
+            return countWord(target->left) + countWord(target->right);
+        else
+            return 0;
 
+    }
+}
+void saveDictToFile(EngVietDict* root, string fileName){
+    if (!root)
+    {
+        return;
+    }
+    else{
+        ofstream fout(fileName, ios::app);
+        saveDictToFile(root->left, fileName);
+        fout << root->data.English << " : " << root->data.Vietnamese << endl;
+        saveDictToFile(root->right, fileName);
+        fout.close();
     }
 }
 int main()
@@ -126,6 +142,8 @@ int main()
         cout << "1.In tu dien" << endl;
         cout << "2.Tra tu dien" << endl;
         cout << "3.Chon tu bat dau bang tu H" << endl;
+        cout << "4. Dem trong cay co bao nhieu tu sau tu t" << endl;
+        cout << "5. Luu file" << endl;
         cin >> choice;
         if (choice == 1)
         {
@@ -134,10 +152,10 @@ int main()
         if (choice == 2)
         {
             string inp;
-            cout << "Nhap tu tieng anh" ;
+            cout << "Nhap tu tieng anh: " ;
             cin.ignore();
             getline(cin, inp);
-            cout << "Nghia cua tu la" << findVietnamese(td, inp) << endl;
+            cout << "Nghia cua tu la: " << findVietnamese(td, inp) << endl;
         }
         if(choice == 3)
         {
@@ -146,10 +164,14 @@ int main()
         if(choice == 4)
         {
             string inp;
-            cout << "Nhap tu tieng anh" ;
+            cout << "Nhap tu T: " ;
             cin.ignore();
             getline(cin, inp);
-            cout << countAfterAWord(td, inp );
+            cout << "So tu sau tu T la: " << countAfterAWord(td, inp ) << endl;
+        }
+        if(choice == 5)
+        {
+            saveDictToFile(td, "output.txt");
         }
     }
     while(choice != 0);

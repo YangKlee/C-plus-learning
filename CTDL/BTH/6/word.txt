@@ -1,44 +1,6 @@
-Algorithm:Thuat toan
-Application:Ung dung
-Array:Mang
-Artificial Intelligence:Tri tue nhan tao
-Authentication:Xac thuc
-Bandwidth:Bang thong
-Backup:Sao luu
-Binary:Nhi phan
 Bit:Bit
 Byte:Byte
-Bug:Loi phan mem
-Cache:Bo nho đem
-Cloud Computing:Đien toan đam may
-Code:Ma, ma nguon
-Compiler:Trinh bien dich
-Compression:Nen du lieu
-Computer:May tinh
-CPU (Central Processing Unit):Bo xu ly trung tam
-Cybersecurity:An ninh mang
-Database:Co so du lieu
-Data:Du lieu
-Debug:Go loi
-Deployment:Trien khai
-Device:Thiet bi
 DNS (Domain Name System):He thong ten mien
-Download:Tai xuong
-Driver:Trinh đieu khien
-Encryption:Ma hoa
-Error:Loi
-Firewall:Tuong lua
-Framework:Khung lam viec
-Function:Ham
-Gigabyte:Gigabyte
-Hardware:Phan cung
-Hosting:Luu tru web
-HTML (HyperText Markup Language):Ngon ngu đanh dau sieu van ban
-HTTP (HyperText Transfer Protocol):Giao thuc truyen sieu van ban
-HTTPS:HTTP bao mat
-Input:Đau vao
-Interface:Giao dien
-Internet:Internet
 IP Address:Đia chi IP
 Iteration:Vong lap
 Java:Ngon ngu lap trinh Java
@@ -65,12 +27,66 @@ Patch:Ban va
 Phishing:Lua đao truc tuyen
 Pixel:Điem anh
 Platform:Nen tang
+Download:Tai xuong
+Driver:Trinh đieu khien
+Encryption:Ma hoa
+Error:Loi
+Firewall:Tuong lua
+Framework:Khung lam viec
+Function:Ham
+Gigabyte:Gigabyte
+Hardware:Phan cung
+Hosting:Luu tru web
+HTML (HyperText Markup Language):Ngon ngu đanh dau sieu van ban
+Bug:Loi phan mem
+Cache:Bo nho đem
+Cloud Computing:Đien toan đam may
+Code:Ma, ma nguon
+Compiler:Trinh bien dich
+Compression:Nen du lieu
+Computer:May tinh
+CPU (Central Processing Unit):Bo xu ly trung tam
+Cybersecurity:An ninh mang
+Database:Co so du lieu
+Data:Du lieu
+Debug:Go loi
+Deployment:Trien khai
+Device:Thiet bi
+Algorithm:Thuat toan
+Application:Ung dung
+Array:Mang
+Artificial Intelligence:Tri tue nhan tao
+Authentication:Xac thuc
+Bandwidth:Bang thong
+Backup:Sao luu
+Binary:Nhi phan
+HTTP (HyperText Transfer Protocol):Giao thuc truyen sieu van ban
+HTTPS:HTTP bao mat
+Input:Đau vao
+Interface:Giao dien
+Internet:Internet
 Port:Cong
 Privacy:Bao mat ca nhan
 Process:Tien trinh
 Program:Chuong trinh
 Programming Language:Ngon ngu lap trinh
 Protocol:Giao thuc
+System:He thong
+Tag:The
+Token:Ma thong bao
+UI (User Interface):Giao dien nguoi dung
+Update:Cap nhat
+Upload:Tai len
+URL (Uniform Resource Locator):Đia chi trang web
+User:Nguoi dung
+UX (User Experience):Trai nghiem nguoi dung
+Variable:Bien
+Version:Phien ban
+Virtual Machine:May ao
+Virus:Vi-rut
+Web Application:Ung dung web
+Website:Trang web
+Wi-Fi:Mang khong day
 Query:Truy van
 RAM (Random Access Memory):Bo nho truy cap ngau nhien
 Repository:Kho luu tru ma nguon
@@ -89,20 +105,4 @@ SQL (Structured Query Language):Ngon ngu truy van co cau truc
 Storage:Luu tru
 String:Chuoi
 Syntax:Cu phap
-System:He thong
-Tag:The
-Token:Ma thong bao
-UI (User Interface):Giao dien nguoi dung
-Update:Cap nhat
-Upload:Tai len
-URL (Uniform Resource Locator):Đia chi trang web
-User:Nguoi dung
-UX (User Experience):Trai nghiem nguoi dung
-Variable:Bien
-Version:Phien ban
-Virtual Machine:May ao
-Virus:Vi-rut
-Web Application:Ung dung web
-Website:Trang web
-Wi-Fi:Mang khong day
 Wireless:Khong day

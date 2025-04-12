@@ -1,0 +1,108 @@
+Algorithm : Thuat toan
+Application : Ung dung
+Array : Mang
+Artificial Intelligence : Tri tue nhan tao
+Authentication : Xac thuc
+Backup : Sao luu
+Bandwidth : Bang thong
+Binary : Nhi phan
+Bit : Bit
+Bug : Loi phan mem
+Byte : Byte
+CPU (Central Processing Unit) : Bo xu ly trung tam
+Cache : Bo nho đem
+Cloud Computing : Đien toan đam may
+Code : Ma, ma nguon
+Compiler : Trinh bien dich
+Compression : Nen du lieu
+Computer : May tinh
+Cybersecurity : An ninh mang
+DNS (Domain Name System) : He thong ten mien
+Data : Du lieu
+Database : Co so du lieu
+Debug : Go loi
+Deployment : Trien khai
+Device : Thiet bi
+Download : Tai xuong
+Driver : Trinh đieu khien
+Encryption : Ma hoa
+Error : Loi
+Firewall : Tuong lua
+Framework : Khung lam viec
+Function : Ham
+Gigabyte : Gigabyte
+HTML (HyperText Markup Language) : Ngon ngu đanh dau sieu van ban
+HTTP (HyperText Transfer Protocol) : Giao thuc truyen sieu van ban
+HTTPS : HTTP bao mat
+Hardware : Phan cung
+Hosting : Luu tru web
+IP Address : Đia chi IP
+Input : Đau vao
+Interface : Giao dien
+Internet : Internet
+Iteration : Vong lap
+Java : Ngon ngu lap trinh Java
+JavaScript : Ngon ngu lap trinh JavaScript
+Kernel : Hat nhan he đieu hanh
+LAN (Local Area Network) : Mang noi bo
+Library : Thu vien
+Link : Lien ket
+Linux : He đieu hanh Linux
+Login : Đang nhap
+Loop : Vong lap
+Machine Learning : Hoc may
+Malware : Phan mem đoc hai
+Memory : Bo nho
+Modem : Thiet bi ket noi mang
+Network : Mang
+Node : Nut mang
+Object : Đoi tuong
+Open Source : Ma nguon mo
+Operating System : He đieu hanh
+Output : Đau ra
+Password : Mat khau
+Patch : Ban va
+Phishing : Lua đao truc tuyen
+Pixel : Điem anh
+Platform : Nen tang
+Port : Cong
+Privacy : Bao mat ca nhan
+Process : Tien trinh
+Program : Chuong trinh
+Programming Language : Ngon ngu lap trinh
+Protocol : Giao thuc
+Query : Truy van
+RAM (Random Access Memory) : Bo nho truy cap ngau nhien
+Repository : Kho luu tru ma nguon
+Resolution : Đo phan giai
+Root : Quyen quan tri cao nhat
+Router : Bo đinh tuyen
+Runtime : Thoi gian chay
+SQL (Structured Query Language) : Ngon ngu truy van co cau truc
+Script : Tap lenh
+Security : Bao mat
+Server : May chu
+Session : Phien lam viec
+Software : Phan mem
+Source Code : Ma nguon
+Spam : Thu rac
+Storage : Luu tru
+String : Chuoi
+Syntax : Cu phap
+System : He thong
+Tag : The
+Token : Ma thong bao
+UI (User Interface) : Giao dien nguoi dung
+URL (Uniform Resource Locator) : Đia chi trang web
+UX (User Experience) : Trai nghiem nguoi dung
+Update : Cap nhat
+Upload : Tai len
+User : Nguoi dung
+Variable : Bien
+Version : Phien ban
+Virtual Machine : May ao
+Virus : Vi-rut
+Web Application : Ung dung web
+Website : Trang web
+Wi-Fi : Mang khong day
+Wireless : Khong day
