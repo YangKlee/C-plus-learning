@@ -110,16 +110,24 @@ Node* arrToSet(int arr[], int n){
     Node* set = nullptr;
     for (int i = 0; i < n; i++)
     {
-        insert(set, a[i]);
+        insert(set, arr[i]);
     }
     return set;
 }
-//Viết hàm chuyển một tập số nguyên ra mảng các số nguyên theo thứ tự tăng
+void inOrder(Node* root, int arr[], int &index) {
+    if (root != nullptr) {
+        inOrder(root->left, arr, index);
+        arr[index++] = root->key;
+        inOrder(root->right, arr, index);
+    }
+}
+
 int setToArr(Node* S, int arr[]){
     if(S)
     {
-        return setToArr(S->left, arr) + setToArr(S->right, arr);
-
+        int index = 0;
+        inOrder(S, arr, index);
+        return index; 
     }
 }
 int main()
@@ -144,5 +152,10 @@ int main()
     print(unionSet(setA, setB));
     cout << "Hieu cua hai tap hop la" << endl;
     print(differenceSet(setA, setB, nullptr));
-
+    int arrOut[1000];
+    int n =  setToArr(setA, arrOut);  
+    for (int i = 0; i < n; i++)
+    {
+        cout << arrOut[i] << " ";
+    }
 }
