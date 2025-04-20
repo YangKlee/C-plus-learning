@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define nullptr NULL
 using namespace std;
 struct Person
 {
