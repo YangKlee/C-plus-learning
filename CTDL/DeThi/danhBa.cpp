@@ -163,65 +163,7 @@ DB* findNodeMin(DB* root)
         return findNodeMin(root->left);
     }
 }
-// xoa so dien thoai
-void deletePhone(DB* &root, string phone)
-{
-    DB *p, *q, *parent;
-    // nut can xoa la p, nut cha cua p la parent
-    p = root;
-    parent = nullptr;
-    while(p != nullptr && p->data.phone != phone)
-    {
-        parent = p;
-        if(comprPhone(p->data.phone, phone))
-        {
-            p = p->left;
-        }
-        else
-        {
-            p = p->right;
-        }
-    }
-    if(p)
-    {
-        // node xoa co hai node con
-        if(p->left != nullptr && p->right != nullptr)
-        {
-            /*
-                Tim phan tu the cho phan tu can xoa
-            */
-            DB* the = findNodeMin(p->right);
-            if(the == nullptr)
-            {
-                the = findNodeMax(p->left);
-            }
-            p->data = the->data;
-            delete the;
-        }
-        // node xoa co khong qua 1 node con
-        else
-        {
-            DB* subtree = p->left;
-            if(subtree == nullptr)
-                subtree = p->right;
-            if(parent == nullptr)
-                root = subtree;
-            else
-            {
-                if(comprPhone(parent->data.phone, p->data.phone))
-                {
-                    parent->left = subtree;
-                }
-                else
-                {
-                    parent->right = subtree;
-                }
-            }
-            delete p;
-        }
-    }
 
-}
 int main()
 {
     DB* root = nullptr;

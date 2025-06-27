@@ -29,7 +29,7 @@ void luythuaMaTran(unsigned long long int  T[][2], long long n)
 
     }
     //return T;
-    cout << T[1][1] ;
+    cout << T[0][0] ;
 }
 int main()
 {
